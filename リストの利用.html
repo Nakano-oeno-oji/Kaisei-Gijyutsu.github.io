@@ -1,0 +1,86 @@
+
+<!-- saved from url=(0059)http://www.m-kaisei.ed.jp/2020html/python3/python_list1.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Language" content="ja">
+
+
+<title>リストの利用</title>
+<link rel="stylesheet" type="text/css" href="./リストの利用_files/gray.css">
+<style type="text/css">
+.style1 {
+				color: #0000FF;
+				font-weight: bold;
+}
+.style3 {
+				line-height: 150%;
+}
+.style4 {
+				border-collapse: collapse;
+				border-style: solid;
+				border-width: 1px;
+				background-color: #DCDCDE;
+}
+.style5 {
+				color: #0000FF;
+}
+.style6 {
+				color: #000000;
+}
+.style7 {
+				color: #FF0000;
+}
+.auto-style1 {
+	background-color: #FFFFCC;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="line-height: 150%">リストを使ってみよう</h2>
+<h3 style="line-height: 150%">リスト（配列）とは</h3>
+<p style="line-height: 150%">
+これまでは変数を利用し、変数に数値や文字列を代入したプログラムを書いてきました。<br>変数だけ使ってプログラムを書くことはできますが、扱うデータ件数が増えたときには変数を追加する必要がありますし、全データを合計するといった処理をおこないたいときにもコードが長く複雑なものになってしまいます。<br>
+そこで、ほとんどのプログラミング言語では<span class="style7">「関連するデータをグループにして、まとめて1つの変数として扱えるしくみ」</span>が用意されています。<br>このような仕組みを<span class="style7">データ構造</span>(data 
+structure)といい、Pythonでは<span class="style7">コレクション</span>（またはコンテナ）といいます。</p>
+<p style="line-height: 150%">コレクション（コンテナ）にはいくつか種類があり、代表的なものとして「<span class="style7">リスト</span>」「ディクショナリ」「タプル」などがあります。<br>
+<span class="style7">リスト</span>とは、複数の値を1列に並べて管理するためのコレクションです。1つの変数につき1つの数値あるいは文字列しか扱えないのに対して、一度に多くのデータを整理して扱えるメリットがあります。</p>
+<p style="line-height: 150%"><span class="style7"><strong>
+<img height="196" src="./リストの利用_files/hairetu1.png" width="699"></strong></span></p>
+<h3 style="line-height: 150%">リストの書式</h3>
+<p style="line-height: 150%">リストは[大かっこ]の中にカンマで区切られた要素で構成されます。</p>
+<table class="auto-style1" style="width: 500px">
+	<tbody><tr>
+		<td>
+		<p class="style3">&nbsp;#リストの基本書式<br>　リスト変数 = [要素0,要素1,要素2,…,]　　　<br></p>
+		</td>
+	</tr>
+</tbody></table>
+<p class="style3">
+先頭から順にインデックス（index）とよばれる番号（添え字）が割り振られています。pythonでは先頭のインデックスは0となります（1から数える言語もあります）。<br></p>
+<h3>例題14　リストの基本操作　ファイル名はrei14.py　※つづきあり</h3>
+<p class="style3">まずはリストを作成しながら、いろんな操作を試してみましょう。<br>
+リストに要素を追加して、その結果を出力してみましょう。要素の区切りにカンマ（,）を入れます。<br>文字列はダブルかシングルクォーテーションで挟みます。<br>
+</p>
+<p class="style3">▲リストmenuに要素を代入したあとで出力してみましょう。<br><img height="87" src="./リストの利用_files/rei14_01.png" width="589"><br>
+▼実行結果<br><img height="46" src="./リストの利用_files/rei14_01kekka.png" width="526"></p>
+<h3>例題14つづき　リスト内要素の追加・削除・変更　ファイル名はrei14.pyのまま上書き保存</h3>
+<p class="style3">先ほどのプログラム分に以下のプログラムを書き加えていきます。<br>5行目：リストmenuの要素[1]を削除します。breadが削除され、[0]apple 
+pie,[1]cokkieとなります。<br>6行目：更新されたリストmenu[1]を変数buyに代入。<br>
+7行目：リストpriceは数値データを格納。<br>
+8行目：removeメソッドは対象となるリストを指定し、要素を削除します。<br>9行目：appendメソッドは対象となるリストを指定し、要素を追加します。<br>
+10行目：sum関数はリストの合計を返します。<br>11行目：len関数はリストに含まれる要素数を返します。<br>
+12行目：format関数は文字列の中に値を埋め込むための関数です。文字列に変数を埋め込みたいときにformat関数を使うとすっきり記述できます。<br>　　　　　【書式】"文字列{ 
+波かっこ1 }{ 波かっこ2}{ 波かっこ3}".format(値1,値2,値3)<br>　　　　　文字列の中に値を埋め込みたいところに｛｝を書きます（複数可）。.format後のかっこに埋め込みたい値を(値1,値2,値3・・・)のようにカンマで区切って並べます。<br>
+<img height="203" src="./リストの利用_files/rei14_02kekka.png" width="654"><br>
+</p>
+<p class="style3">▼実行結果　さて？部分には何が出力されるでしょうか。実際に書いて確かめてみましょう。<br>
+<img height="71" src="./リストの利用_files/rei14_02.png" width="543"><br>
+</p>
+<p class="style3">
+&nbsp;</p>
+<p class="style3">&nbsp;</p>
+
+  
+
+</body></html>

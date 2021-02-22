@@ -1,0 +1,90 @@
+
+<!-- saved from url=(0065)http://www.m-kaisei.ed.jp/2020html/python3/python_import1math.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Language" content="ja">
+
+
+<title>モジュールの利用</title>
+<link rel="stylesheet" type="text/css" href="./モジュールの利用_files/gray.css">
+<style type="text/css">
+.style1 {
+				color: #0000FF;
+				font-weight: bold;
+}
+.style3 {
+				line-height: 150%;
+}
+.style4 {
+				border-collapse: collapse;
+				border-style: solid;
+				border-width: 1px;
+				background-color: #DCDCDE;
+}
+.style5 {
+				color: #0000FF;
+}
+.style6 {
+				color: #000000;
+}
+.style7 {
+				color: #FF0000;
+}
+.auto-style1 {
+	background-color: #FFFFCC;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="line-height: 150%">モジュールの利用（1）　便利な機能を追加してみよう</h2>
+<p style="line-height: 150%">これまではPythonに最初から組み込まれている関数を使ってきました。<br>
+このような関数以外にも、明示的に宣言することでPythonやほかの開発者が用意した関数などを自由に自分のプログラムに取り入れることができます。<br>
+<span class="style7">モジュール（module）</span>は別のプログラムに取り込んで使うことを前提として、ある機能をひとまとめにしたファイルをいいます。<br>
+Pythonが公式に用意したモジュールをまとめたものを<span class="style7">標準ライブラリ</span>といいます。そのうちのmathモジュールとrandomモジュールを課題では使ってみます。<br>
+また、外部によるライブラリが豊富に用意されています。有名なものとして機械学習用のライブラリscikit-learn（サイキットラーン）などがあります。</p>
+<table class="auto-style1" style="width: 500px">
+	<tbody><tr>
+		<td colspan="2">#mathモジュールでできることの例</td>
+	</tr>
+	<tr>
+		<td style="width: 160px">
+		<p class="style3">&nbsp;math.sqrt(x)<br>&nbsp;math.floor(x)<br>&nbsp;math.ceil(x)<br>&nbsp;math.trunc(x)<br>&nbsp;pow(x,y)<br>&nbsp;sin(x),cos(x),tan(x)<br>&nbsp;math.pi</p>
+		</td>
+		<td>
+		<p class="style3">#xの平方根<br>#x以下の最大の整数 x=3.3→3<br>#x以上の最小の整数 x=3.3→4<br>
+		#tranc(x)小数点以下を切り捨てるx=3.3→3<br>#xのy乗<br>#xのサイン、コサイン、タンジェント<br>#円周率（定数）</p>
+		</td>
+	</tr>
+</tbody></table>
+<h3>例題15 mathモジュールを取り込んでみよう rei15　<span class="style7">※読むだけでよい</span></h3>
+<p class="style3">1行目のimport文でmathモジュールを取り込みことを宣言しています。<br>
+続けて2行目でmathモジュールが提供する定数piを参照しています。<br>3,4行目ではmathモジュールが提供する関数を呼び出しています。<br>
+　floor関数：引数の小数点以下を切り捨て<br>　ceil関数：引数のを小数点以下で切り上げ</p>
+<p><img height="114" src="./モジュールの利用_files/math_01.png" width="665"></p>
+<p class="style3">
+▼実行結果<br><img height="73" src="./モジュールの利用_files/math_01kekka.png" width="580"></p>
+<h3>問題16 「1から100までに含まれる素数を出力するプログラム」の作成　rei16　※つづきあり</h3>
+<p class="style3">作成例の基本方針としては、<br>mathモジュールの呼び出し（ただし作成例では出番がない）<br>
+空のリストaと変数countを用意<br>for文で　変数iを2から100までの整数として順に出力<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+for文で　変数ｊ（2からi）まで用意<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+iをjで割った余りを調べます。<br>　　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+if文で　iが素数であるかどうか判定する条件式<br>　　　　　　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+素数ではない→なにもせずにスルー<br>　　　　　　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+素数と判定→iをリストに代入</p>
+<p class="style3">▼作成例<br>
+<img height="341" src="./モジュールの利用_files/impt-03.png" width="595"><br><br>▼出力結果<br>
+<img height="89" src="./モジュールの利用_files/impt-04.png" width="878"><br><br></p>
+<h3>問題17（例題16のつづき）　計算回数を減らしましょう！　ファイル名はrei17（別名をつけて保存します）</h3>
+<p class="style3">例題17では、2からｊまで片っ端から割って調べていきましたが、計算回数を減らしてください。<br>
+つぎの①だけまたは①と②を実装してみましょう。<span class="style7">あるいは違うアイディアがあればそれでもOK</span>です。<br>
+①　「もしiが(2を除いた)偶数のときは割り算処理をしない」<br>②　「jの終了値はiの平方根までとする」<br>
+　→iが素数ではないとき、√i以下の約数をもつ。<br>　　 i=11の場合√11≒3.31　なので　j=1,2,3まで割って調べれば十分だということ。※range関数の終了値に注意してください。<br>
+▼出力結果の例<br>
+<img height="78" src="./モジュールの利用_files/sosu-02.png" width="896"></p>
+<p class="style3">&nbsp;</p>
+<p class="style3">&nbsp;</p>
+
+  
+
+</body></html>

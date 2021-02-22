@@ -1,0 +1,82 @@
+
+<!-- saved from url=(0061)http://www.m-kaisei.ed.jp/2020html/python3/python-input01.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Language" content="ja">
+
+
+<title>変数を使ってみよう</title>
+<link rel="stylesheet" type="text/css" href="./変数を使ってみよう２_files/gray.css">
+<style type="text/css">
+.style1 {
+				color: #FF0000;
+}
+.auto-style2 {
+	background-color: #FFFFCC;
+}
+.auto-style3 {
+	line-height: 150%;
+}
+em {
+    color: #c22;
+}
+em {
+    color: #cc0000;
+    font-style: normal;
+}
+
+* {
+    font-size: 12pt;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="line-height: 150%">データの入力input関数とデータの型</h2>
+<p style="line-height: 150%">
+input関数を使うと、プログラム実行中にキーボードからデータを受け取ることができます。受け取ったデータは<span class="style1">数値であっても文字データとして扱われます</span>。<br>
+値（データ）にはいくつか型があります。大きな分類としては、<span class="style1">数値型（int/float）、文字列型(str)、真偽値型（bool）</span>があります。</p>
+<table style="width: 600">
+	<tbody><tr>
+		<td class="auto-style2">
+		<p class="auto-style3">変数=input()&nbsp; 　&nbsp; #入力されたデータを<span class="style1"><strong>文字として</strong></span>受けとり変数に渡す<br>
+		変数=input("") 　#質問文を提示し、受け取った文字データを変数に渡す。</p>
+		</td>
+	</tr>
+</tbody></table>
+<p style="line-height: 150%">文字のままでは算術演算できません。【例題2】では受け取ったデータを数値型に変換し、演算します。<br>
+数値に変換するには、int関数またはfloat関数を使います。int（）は引数を整数に変換、float（）は引数を浮動小数点数（小数を含む数）に変換します。<br>
+</p>
+<h3 style="line-height: 150%"><b>【例題2】input関数によるデータの取り込みと変換（ファイル名はrei2.py）</b></h3>
+<p style="line-height: 150%">
+rei2.py　ファイルを新規で作成します。<br>▼input関数を使って次のように記述し実行します。#コメントは書かなくてよいです。※数字はプログラム実行時にキーボードから入力します。<br>
+<img height="153" src="./変数を使ってみよう２_files/rei2-1.png" width="359"></p>
+<p style="line-height: 150%">▼rei2実行結果<br>
+<img height="85" src="./変数を使ってみよう２_files/rei2-2.png" width="274"><br>
+キーボードから受け付けた数値（123と456）は文字列として扱われるので、+演算によって連結されます。<br>
+</p>
+<p style="line-height: 150%">▼つづけて以下のように入力します。<br><span class="style1">int関数は引数を<strong>整数に変換する関数</strong>。右辺の変換結果を変数に渡します</span>。<br>
+<img height="205" src="./変数を使ってみよう２_files/rei2-3.png" width="398"><br>
+</p>
+<p style="line-height: 150%">▼実行結果<br>
+<img height="91" src="./変数を使ってみよう２_files/rei2-4.png" width="323"><br>
+</p>
+<p style="line-height: 150%">
+▼ただし、int関数は小数点を含む文字列を受け付けることができずエラーとなります。<br>
+<img height="176" src="./変数を使ってみよう２_files/input-05.png" width="661"></p>
+<p style="line-height: 150%">
+▼小数点を含む文字列を受け取って、整数にするには、まずはfloat関数（小数を含む数値型）に渡してからint関数に渡すとエラー回避できます。<br>
+<img height="200" src="./変数を使ってみよう２_files/rei2-5.png" width="408"><br><br>
+</p>
+<h3 style="line-height: 150%">【例題（問題）3】標準体重を計算して出力してみよう（ファイル名はrei3.py）</h3>
+<p style="line-height: 150%">次のように「名前」と「身長」を入力すると、その人の標準体重が出力されるプログラムを作成してください。<br>
+標準体重は　（身長-100）×0.9　として計算してください。変数名は自由。　<br>
+<img height="91" src="./変数を使ってみよう２_files/input-07.png" width="367"></p>
+<p style="line-height: 150%">&nbsp;</p>
+<h3 style="line-height: 150%">課題の提出（保存）</h3>
+<p style="line-height: 150%">rei1.pyと同様、kadaiフォルダに保存します。<br></p>
+<p style="line-height: 150%">　</p>
+  
+
+
+</body></html>

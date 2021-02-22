@@ -1,0 +1,214 @@
+
+<!-- saved from url=(0058)http://www.m-kaisei.ed.jp/2020html/python3/python4-1if.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Language" content="ja">
+
+
+<title>制御文if</title>
+<link rel="stylesheet" type="text/css" href="./制御文if_files/gray.css">
+<style type="text/css">
+.style1 {
+				color: #FF0000;
+}
+.style2 {
+				color: #000080;
+				font-weight: bold;
+}
+.style3 {
+				line-height: 150%;
+}
+.style4 {
+				background-color: #E4E4E4;
+}
+.style6 {
+				border-color: #C0C0C0;
+				border-width: 1px;
+}
+.style7 {
+				font-weight: bold;
+				border-width: 0;
+				background-color: #E4E4E4;
+}
+.style8 {
+				border-color: #66CCFF;
+				border-width: 0;
+}
+.auto-style1 {
+	background-color: #FFFFCC;
+}
+em {
+  color: #f00;
+  font-style: normal;
+}
+* {
+  font-size: inherit;
+}
+.auto-style2 {
+	border-left: 1px solid #C0C0C0;
+	border-top: 1px solid #C0C0C0;
+	background-color: #E4E4E4;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.auto-style3 {
+	border-left: 1px solid #C0C0C0;
+	border-top: 1px solid #C0C0C0;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+.auto-style4 {
+	border-left-width: 0;
+	border-right-color: #C0C0C0;
+	border-right-width: 0;
+	border-top-width: 0;
+	border-bottom-color: #C0C0C0;
+	border-bottom-width: 0;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="line-height: 150%">【重要】制御文でプログラムの流れを変える</h2>
+<p style="line-height: 150%">
+制御文とはプログラムの流れを必要に応じて変えたいときに使うもので、プログラミングをする上で欠かせないものです。<br>
+プログラムは本来、水のように上から下に向かって流れていきますが、それだけでは単純な処理しか定義できません。状況によって、「同じ処理を繰り返す」「演算結果によっては処理を中止したい」ということもあるでしょう。そんなときに活躍するのが制御文です。制御文でプログラムの流れを戻したり、せき止めたりすることもできます。</p>
+<h3 style="line-height: 150%">例題4・まずは条件分岐if（もし～ならば）　ファイル名rei4</h3>
+<p style="line-height: 150%">
+IF文は英語の「if」という単語の意味の通り、「もし～だったら・・・する」という、条件分岐を作る制御文です。条件が「成り立った場合」と「成り立たなかった場合」の2通りのプログラムの流れを作ることができます。もちろん、IF文を複数使用することにより2つ以上の流れを作ることもできます。<br>
+<table class="auto-style1" style="width: 500px">
+	<tbody><tr>
+		<td><strong>if　条件式①：</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		#条件式の後に<span class="style1">コロン</span>をつけます。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ①が真のときの実行内容<br>
+		<strong>[elif　条件式②：</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ②が真のときの実行内容<strong>]</strong><br>
+		<strong>[else：</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ①も②も偽のときの実行内容<strong>]</strong></td>
+	</tr>
+	<tr>
+		<td>#if は「もし」を意味します。<br>#条件式が真であれば、<span class="style1"><strong>インデントされたブロックを実行</strong></span>します。<br>
+		#elif　が複数あるときは上位のものが優先されます。<br>#elif や else　は省略できます。</td>
+	</tr>
+</tbody></table>
+</p>
+<p style="line-height: 150%">
+▼点数を入力したとき、点数によって異なるメッセージが表示されるようにします。<br>
+<img height="310" src="./制御文if_files/if-01.png" width="210"><br>
+</p>
+<p style="line-height: 150%">
+▼インデント（<span class="style1"><strong>自動で入らない場合はTabキーによる字下げ</strong></span>）によって、実行内容を指定します。10行目のprint関数はif分岐とは関係なく実行されます。<br>
+条件式のあとのコロンをわすれずに。「aとbは等しい」は a<span class="style1"> == </span>b と書きます。<br>
+<img height="255" src="./制御文if_files/rei4-1.png" width="537"><br><br>▼参考（書かなくてよい）：条件演算子(if 
+else)を使ってprint関数内でメッセージを振り分けることができます。<br>　x <span class="style1">if</span> condition
+<span class="style1">else</span> y　 (条件が成立すればx 、成立しなければyを返します。)<br>
+<img height="76" src="./制御文if_files/if-03.png" width="455"></p>
+<p style="line-height: 150%">&nbsp;</p>
+<h3 style="line-height: 150%">問題5　「BMI計算プログラム」の作成　ファイル名はrei5　※発展課題は時間に余裕があれば挑戦</h3>
+<p style="line-height: 150%">BMIとは国際基準の肥満度を示すための指数で、健康診断でもよく使用されています。<br>&nbsp;&nbsp;&nbsp; 
+BMI=体重（kg）÷身長（m）<sup>2</sup><br>
+で求めることができます。判定基準は国によって異なりますが、日本では男性は「22.0」女性は「21.0」が理想値だそうです。</p>
+<table style="width: 500" class="auto-style4">
+				<tbody><tr>
+								<td style="width: 190px" class="auto-style2">肥満度判定</td>
+								<td style="width: 250px" class="auto-style2">BMI値</td>
+				</tr>
+				<tr>
+								<td style="width: 190px" valign="top" class="auto-style3">
+								<p class="style3">やせ（低体重）</p>
+								</td>
+								<td style="width: 250px" valign="top" class="auto-style3">
+								<p class="style3">18.5未満</p>
+								</td>
+				</tr>
+				<tr>
+								<td style="width: 190px" valign="top" class="auto-style3">
+								<p class="style3">普通体重</p>
+								</td>
+								<td style="width: 250px" valign="top" class="auto-style3">
+								<p class="style3">18.5～25未満</p>
+								</td>
+				</tr>
+				<tr>
+								<td style="width: 190px" valign="top" class="auto-style3">
+								<p class="style3">肥満予備軍</p>
+								</td>
+								<td style="width: 250px" valign="top" class="auto-style3">
+								<p class="style3">25～35未満</p>
+								</td>
+				</tr>
+				<tr>
+								<td style="width: 190px" valign="top" class="auto-style3">
+								<p class="style3">肥満（中）</p>
+								</td>
+								<td style="width: 250px" valign="top" class="auto-style3">
+								<p class="style3">35～40未満</p>
+								</td>
+				</tr>
+				<tr>
+								<td style="width: 190px" valign="top" class="auto-style3">
+								<p class="style3">肥満（大）</p>
+								</td>
+								<td style="width: 250px" valign="top" class="auto-style3">
+								<p class="style3">40以上</p>
+								</td>
+				</tr>
+</tbody></table>
+<p class="style3">
+▼実行時に、身長（cm）と体重（kg）を入力し、BMI値と肥満度の判定を出力するプログラムを作成します。<br>【発展課題】BMI=22を標準体重とした場合、現在の体重との差を出力してみましょう。ファイル名は<span class="style1">rei5.pyのまま上書き保存</span><br>
+<img height="125" src="./制御文if_files/if-05.png" width="577"><br></p>
+<p style="line-height: 150%">▽参考：round関数について<br>
+round関数を使用すれば簡単に四捨五入できます。書式はround( 数値 , 桁数 
+)　です。引数の桁数は省略すると整数型として返されます。0と入れるとfloat型と扱われます。</p>
+<table class="auto-style1" style="width: 500px">
+	<tbody><tr>
+		<td>
+		<p class="style3">round(3.141592 , 2 ) #結果は3.14<br>round(1.5)　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		#結果は2<br>round(2.5 , 0 )　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #結果は<span class="style1">3.0ではなく<strong>2.0</strong>が返ってきます。※</span></p>
+		</td>
+	</tr>
+</tbody></table>
+<p style="line-height: 150%">※python3.Xでは、丸めた先が偶数になるように値を丸める仕様となっています。</p>
+<h3 style="line-height: 150%"><a name="hikakuenzansi"></a>比較演算子のまとめ</h3>
+<p style="line-height: 150%">比較演算子のまとめです。</p>
+<table class="auto-style1" style="width: 500">
+	<tbody><tr>
+		<td>&nbsp;a <em>==</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b と等しい<br>&nbsp;a <em>!=</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b と異なる<br>&nbsp;a <em>&lt;</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b よりも小さい<br>&nbsp;a <em>&gt;</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b よりも大きい<br>&nbsp;a <em>&lt;=</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b 以下である<br>&nbsp;a <em>&gt;=</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b 以上である<br>&nbsp;a <em>&lt;&gt;</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b と異なる<br>&nbsp;a <em>is</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b と等しい<br>&nbsp;a <em>is not</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b と異なる<br>&nbsp;a <em>in</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b に含まれる<br>&nbsp;a <em>not in</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が b に含まれない</td>
+	</tr>
+</tbody></table>
+<p>論理演算子（ブール演算子）を使うと、「aとbは等しい」かつ「cはdよりも大きい」など複雑な条件を記述することができます。&nbsp;</p>
+<table class="auto-style1" style="width: 500">
+	<tbody><tr>
+		<td>a <em>and</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # a も b 
+		も真であれば真<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# score&gt;=50 and score&lt;80 （score50点以上かつ80点未満）<br>a <em>or</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a または b が真であれば真<br>　　　　　　　　# club="baseball" or club="tekken"　　　<br>
+		<em>not</em> a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a が偽であれば真<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# not score&gt;=45</td>
+	</tr>
+</tbody></table>
+<p style="line-height: 150%">
+<img height="125" src="./制御文if_files/basic04-if03.png" width="529"></p>
+<p style="line-height: 150%">▽論理演算子を使った記述の例（見るだけでよい）<br>
+<img height="301" src="./制御文if_files/bool-01.png" width="458"></p>
+<p style="line-height: 150%">▽実行結果　上の条件式はどれも真なのでどれも出力されます。<br>
+<img height="73" src="./制御文if_files/bool-02.png" width="338"></p>
+<p style="line-height: 150%">&nbsp;</p>
+<p style="line-height: 150%">&nbsp;</p>
+  
+
+
+</body></html>

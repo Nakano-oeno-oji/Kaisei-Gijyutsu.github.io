@@ -1,0 +1,142 @@
+
+<!-- saved from url=(0056)http://www.m-kaisei.ed.jp/2020html/python3/python2-1.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Language" content="ja">
+
+
+<title>変数を使ってみよう</title>
+<link rel="stylesheet" type="text/css" href="./変数を使ってみよう_files/gray.css">
+<style type="text/css">
+.style1 {
+				color: #FF0000;
+}
+.auto-style2 {
+	background-color: #FFFFCC;
+}
+.auto-style3 {
+	line-height: 150%;
+}
+em {
+    color: #c22;
+}
+em {
+    color: #cc0000;
+    font-style: normal;
+}
+
+* {
+    font-size: 12pt;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="line-height: 150%">変数を使った演算とprint関数による出力</h2>
+<p style="line-height: 150%">print関数は、文字列や数値を出力します。</p>
+<table style="width: 500px">
+	<tbody><tr>
+		<td class="auto-style2">
+		<p class="auto-style3">print("文字列")&nbsp; 
+		　#　文字列（文字の集まり）を出力するとき<br>print(数値)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		#　数値や数式の演算結果を出力するとき</p>
+		</td>
+	</tr>
+</tbody></table>
+<p style="line-height: 150%">test.pyではprint関数の（）の中に文字列や数値を入力しましたが、【例題1】では変数を使って演算します。<br>
+変数とは数値や文字などを格納しておく箱のようなものです。変数に値を代入し,演算した結果を出力します。<br>
+<img alt="" height="125" src="./変数を使ってみよう_files/ex-01.png" width="95"></p>
+<h3 style="line-height: 150%"><b>【例題1】変数を使った演算（ファイル名はrei1.py）</b></h3>
+<p style="line-height: 150%">
+変数に名前をつけるときは以下のルールがあります。name や num など分かりやすい名前をつけるとよいです。</p>
+<table class="auto-style2" style="width: 500px">
+	<tbody><tr>
+		<td>
+		<p class="auto-style3">1) 1文字目は英文字かアンダーバー<br>2) 2文字目以降は英数文字、アンダーバー <br>3) 予約語は使用できない<br>4) 
+		大文字と小文字は区別される </p>
+		</td>
+	</tr>
+</tbody></table>
+<p style="line-height: 150%">
+予約語とはあらかじめ関数名や演算子として登録されているもので、例えば次のようなものがあります。<br>
+関数や演算子はエディタ上で色分けされるので予約語かどうかの区別は簡単です。</p>
+<table class="auto-style2" style="width: 500px">
+	<tbody><tr>
+		<td>
+		<p class="auto-style3">【主な予約語 = 変数名として使えないもの】<br>and del for is raise assert elif from lambda return break else 
+		global not try class except if or while continue exec import pass yield 
+		def finally in print など</p>
+		</td>
+	</tr>
+</tbody></table>
+<p style="line-height: 150%">
+▼<span class="style1">test.pyとは別に、新規ファイルを開き</span>、つぎのように入力します。<span class="style1"><strong>kadaiフォルダ内に保存</strong></span>します。ファイル名は<span class="style1">　<strong>rei1.py</strong></span><br>
+#は一行コメントです。複数行にわたるときは"""（ダブルクォーテーション3連）で挟みます。プログラムがどんな処理をしているのかメモするときなどに使います。<br>
+変数xに10を代入し、計算結果を出力してみましょう。<span class="style1"><strong><br>日本語以外はすべて半角文字で入力</strong></span>します。6行目から書き始めてください。<br>
+<img height="232" src="./変数を使ってみよう_files/rei1-1.png" width="425"><br>
+</p>
+<p style="line-height: 150%">▼rei1実行結果<br>
+<img height="81" src="./変数を使ってみよう_files/rei1-2.png" width="226"><br>
+</p>
+<p style="line-height: 150%">▼つづけて以下のように入力します。#コメント部分は書かなくてよいです。<br><span class="style1"><strong>
+＝（イコール）は代入演算子</strong>です。右辺の演算結果を変数に渡します</span>。<br>
+自分自身に加算するときは14行目のように書いてもよいですし、16行目のような短い形で書くこともできます。<br>
+<img height="175" src="./変数を使ってみよう_files/rei1-3.png" width="319"><br>
+</p>
+<p style="line-height: 150%">▼実行結果<br>
+<img height="126" src="./変数を使ってみよう_files/rei1-4.png" width="276"><br>
+</p>
+<p style="line-height: 150%">▼<span class="style1">文字列は””（または’’）ではさみます</span>。文字列どうしを連結させたり、繰り返しができます。<br>
+#コメント部分は省略してください。<br>
+<img height="253" src="./変数を使ってみよう_files/rei1-5.png" width="338"><br>
+</p>
+<p style="line-height: 150%">▼実行結果　<span class="style1">※28行目：print関数の引数は1つではなく、カンマで区切ることで複数の変数やデータを出力することができます</span>。<br>
+<img alt="" height="124" src="./変数を使ってみよう_files/rei1-06.png" width="536"><br><br></p>
+<h3 style="line-height: 150%">演算子のまとめ（算術・代入・文字列演算）<a name="enzansi1"></a></h3>
+<p style="line-height: 150%">（1）算術演算子&nbsp;</p>
+<table class="auto-style2" style="width: 500">
+	<tbody><tr>
+		<td>
+		<p class="auto-style3">a <em>+</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 加算<br>
+		a <em>-</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 減算<br>a
+		<em>*</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 乗算<br>a
+		<em>/</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 除算<br>a
+		<em>%</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # a を b 
+		で割った余り<br>a <em>**</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # a 
+		の b 乗<br>a <em>//</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 
+		切り捨て除算</p>
+		</td>
+	</tr>
+</tbody></table>
+<p>（2）代入演算子（++や--はサポートされていないので、a+=1　やa-=1　を用います）</p>
+<table class="auto-style2" style="width: 500">
+	<tbody><tr>
+		<td>
+		<p class="auto-style3">a <em>=</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a に b を代入する<br>a <em>+=</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a = a + b に同じ<br>a <em>-=</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a = a - b に同じ<br>a <em>*=</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a = a * b に同じ<br>a <em>/=</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# a = a / b に同じ</p>
+		</td>
+	</tr>
+</tbody></table>
+<p>（3）文字列演算</p>
+<table class="auto-style2" style="width: 500px">
+	<tbody><tr>
+		<td>
+		<p class="auto-style3">a <em>+</em> b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# 文字列 a と 文字列 b を連結します<br>a <em>*</em> n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		# 文字列 a を n 回繰り返します</p>
+		</td>
+	</tr>
+</tbody></table>
+<h3 style="line-height: 150%">課題の提出（保存）</h3>
+<p style="line-height: 150%">test.pyと同様、kadaiフォルダに<strong>rei1</strong>として上書き保存します。</p>
+<p style="line-height: 150%">&nbsp;</p>
+<p style="line-height: 150%"><br></p>
+<p style="line-height: 150%">　</p>
+  
+
+
+</body></html>

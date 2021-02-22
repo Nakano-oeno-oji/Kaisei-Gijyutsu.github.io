@@ -1,0 +1,72 @@
+
+<!-- saved from url=(0056)http://www.m-kaisei.ed.jp/2020html/python3/python1-2.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Language" content="ja">
+
+
+<title>プログラムの入力と実行</title>
+<link rel="stylesheet" type="text/css" href="./プログラムの入力と実行_files/gray.css">
+<style type="text/css">
+.auto-style1 {
+	color: #FF0000;
+}
+.auto-style2 {
+	border-style: solid;
+	border-width: 1px;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="line-height: 150%">プログラムの入力と実行</h2>
+<p style="line-height: 150%">
+対話モードではちょっと試すときにはよいのですが、いちいちプログラムを書く必要があるので、たくさん指示があるときには面倒です。 
+<br>課題では<span class="auto-style1">あらかじめプログラムを入力したものをファイルとして保存し、実行</span>していきます。<br>
+</p>
+<p style="line-height: 150%">プログラムを保存する場所を作成します。今後<span class="auto-style1">すべてのプログラムファイルは同じ場所に保存</span>してください。</p>
+<h3 style="line-height: 150%">【重要】作業フォルダの作成←必ず最初にやっておく！</h3>
+<p style="line-height: 150%">プログラム文は指定のフォルダに必ず保存します。フォルダを作成しましょう。<br>デスクトップのPCアイコンから自分のネットワークドライブを開きます。フォルダを新規で作成し、<span class="auto-style1"><strong>kadai</strong></span>と名前をつけます。</p>
+<p style="line-height: 150%">
+▼PCアイコンをダブルクリックし、ネットワークの場所を開く。「ホーム」タブ→「新しいフォルダー」をクリック、<span class="auto-style1">kadai</span>と名前を変更する。<br>
+<img class="auto-style2" height="485" src="./プログラムの入力と実行_files/mk_folder.png" width="820"><br></p>
+<h3 style="line-height: 150%">テキストエディタの起動とプログラム文の入力（test.py）</h3>
+<p style="line-height: 150%">
+Pythonはインタプリタ型スクリプト言語（コンパイルを必要としない）ので、メモ帳などのごく普通のテキストエディタで記述することができますが、プログラムを記述するためのエディタを使ったほうが便利です。Atomも人気のある無料エディタのひとつです。<br>
+先ほどピン留めしたタスクバーのアイコン（またはスタートボタン→プログラム一覧→<span class="auto-style1">Atomportable</span>）を選択します。</p>
+<p style="line-height: 150%">▼タスクバーのAtomアイコンをクリック、しばらく待ちます。<br>
+<img height="93" src="./プログラムの入力と実行_files/atom_taskbar2.png" width="367"><br><br>▼タスクバーになければスタートボタンのAtomportableをクリック、しばらく待ちます。<br>
+<img alt="" height="355" src="./プログラムの入力と実行_files/atom-01.png" width="316"><br>
+</p>
+<p style="line-height: 150%">
+▼起動したら、次の二行を入力してください。すべて半角文字で入力しましょう。<br>
+<img class="auto-style2" height="206" src="./プログラムの入力と実行_files/test01.png" width="478"><br>
+</p>
+<p style="line-height: 150%">
+▼書けたら、[ファイル]メニューから保存します。&nbsp;<br>
+<img alt="" height="476" src="./プログラムの入力と実行_files/atom-03.png" width="315"><br></p>
+<p style="line-height: 150%">
+▼保存場所は<span class="auto-style1"><strong>課題用フォルダkadai</strong></span>です。ファイル名は　<span class="auto-style1"><strong>test.py</strong></span>　とします。Pythonの文法に従って色分けされます。<br>
+<img alt="" height="533" src="./プログラムの入力と実行_files/atom-04.png" width="946"></p>
+<p style="line-height: 150%">
+&nbsp;</p>
+
+<h2 style="line-height: 150%">保存したファイルをコマンドプロンプトで実行する</h2>
+<p style="line-height: 150%">保存したプログラムをコマンドプロンプト上で実行します。cd(change 
+directory)コマンドで実行場所を移動します。<br>
+▼コマンドプロンプトを起動し　cd kadai と入力。カレントディレクトリ（現在の作業場所）をkadaiフォルダに変更します。<br>
+<img alt="" height="331" src="./プログラムの入力と実行_files/merry04.png" width="599"></p>
+<p style="line-height: 150%">▼あとは保存したファイル名testと入力、Enterキーを押します。すると実行結果が出力されます。<br>
+<img height="412" src="./プログラムの入力と実行_files/hello_world2.png" width="621"><br>
+</p>
+  
+<p style="line-height: 150%">&nbsp;プログラム文を書いて、保存し、実行するまでの流れがつかめればOKです。</p>
+<h3 style="line-height: 150%">ここまでの操作のまとめ</h3>
+<p style="line-height: 150%">＊プログラム文の作成・編集・保存する→エディタ（編集用ソフト）を使用する。<br>
+＊パイソンファイルのファイル名には拡張子.pyをつける。<br>＊プログラムを実行するには実行環境が必要（Windowsではコマンドプロンプト）<br>
+＊パイソンファイルの実行は、アイコンをダブルクリックするのではなく、正しい実行位置でのコマンド入力が必要。<br>
+＊パイソンファイルの保存先は場所を決めて、同じフォルダ内に保存していく。</p>
+  
+
+
+</body></html>
