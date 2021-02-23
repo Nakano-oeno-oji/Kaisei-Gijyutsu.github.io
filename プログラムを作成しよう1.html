@@ -1,0 +1,99 @@
+
+<!-- saved from url=(0061)http://www.m-kaisei.ed.jp/2020html/python3/python6-1while.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Language" content="ja">
+
+
+<title>プログラムを作成しよう</title>
+<link rel="stylesheet" type="text/css" href="./プログラムを作成しよう1_files/gray.css">
+<style type="text/css">
+.style1 {
+				color: #0000FF;
+				font-weight: bold;
+}
+.style3 {
+				line-height: 150%;
+}
+.style4 {
+				border-collapse: collapse;
+				border-style: solid;
+				border-width: 1px;
+				background-color: #DCDCDE;
+}
+.style5 {
+				color: #0000FF;
+}
+.style6 {
+				color: #000000;
+}
+.style7 {
+				color: #FF0000;
+}
+.auto-style1 {
+	background-color: #FFFFCC;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="line-height: 150%">制御文（2）while　条件が成り立つ間繰り返す</h2>
+<p style="line-height: 150%">while文は、条件が真の間だけ実行を繰り返します。ループを繰り返すたびに、条件を評価し、条件が偽になったところでループを終了します。<br>
+基本の書式は次のとおり。</p>
+<table class="auto-style1" style="width: 500px">
+	<tbody><tr>
+		<td>
+		<p class="style3">&nbsp; while 条件式：<br>　　　　条件式が真の時に実行する処理<br>
+		　　　　条件式の結果が変化するする処理　　#これがないと無限に続く<br>[else：<br>　　　　条件が成立しなくなったときに実行する処理] 
+		#省略可能</p>
+		</td>
+	</tr>
+</tbody></table>
+<p class="style3">
+条件式が真の場合、インデントされたブロックを処理します。if文と同じです。ただ、<span class="style7">Ifのときはブロック内の処理を1回だけ実行しますが、whileではブロック内の処理を実行した後、改めて条件式を評価</span>します。そして条件式が真の間は繰り返し処理を実行します。</p>
+<h3>例題6　まずは基本形を書いてみよう　ファイル名はrei6.py　※つづきあり</h3>
+<p class="style3">条件が成立する間、メッセージと変数を出力するプログラムです。<br>
+▼if文と同じように、条件式が成立するときの処理内容はインデント（字下げ）したところに記述します。<br>
+4行目　sep=":"はprint関数のオプション（separate：区切り文字の指定）です。例題6ではセミコロンで区切って出力しています。 <br>
+<img height="199" src="./プログラムを作成しよう1_files/while01.png" width="400"></p>
+<p class="style3">▼実行結果<br>
+<img height="264" src="./プログラムを作成しよう1_files/while02.png" width="383"></p>
+<p class="style3">&nbsp;</p>
+<h3>例題6つづき　if else文を組みあわせてみよう　ファイル名はrei6.pyのまま上書き保存</h3>
+<p class="style3">さらにif文を追加してみましょう。<br>
+▼変数iの値の大きさによって、変数msg2に代入する文字を「初級」と「上級」に分岐しています。<br>
+<img height="313" src="./プログラムを作成しよう1_files/while03.png" width="628"></p>
+<p class="style3">▼実行結果<br>
+<img height="251" src="./プログラムを作成しよう1_files/while04.png" width="355"></p>
+<p class="style3">&nbsp;</p>
+<h3>【重要】例題6のつづき　break文で繰り返し処理ブロックから抜け出す　ファイル名はrei6のまま</h3>
+<p class="style3">break文で繰り返しループから簡単に抜けることができます。<br>▼まずは9行目にかいてみましょう。<br>
+<img height="355" src="./プログラムを作成しよう1_files/while05.png" width="517"><br><br>
+▼実行結果　レベル5が出力されました。12・13行目も無視されます。<br>
+<img height="135" src="./プログラムを作成しよう1_files/while06-1.png" width="135"><br>
+</p>
+<p class="style3">&nbsp;</p>
+<h3 style="line-height: 150%">問題7　「0が入力されるまで繰り返すプログラム」　ファイル名はrei7</h3>
+<p style="line-height: 150%">入力されたデータの総和を求めます。もし0（正確には0以下の数値）が入力された時点で、繰り返しを終了し、合計を出力します。<br>
+<img height="191" src="./プログラムを作成しよう1_files/while-01.png" width="496"></p>
+<p style="line-height: 150%">▼実行結果<br>
+<img height="186" src="./プログラムを作成しよう1_files/while-02.png" width="331"></p>
+<h3 style="line-height: 150%">問題7のつづき　ファイル名はrei7.pyのままでok</h3>
+<p style="line-height: 150%">「合計」だけではなく、「（0を除いた）入力数」や「平均値」を出力します。<br>
+変数ｙとは別に、ループするたびに回数をカウントする変数が必要です。ファイル名は<b>rei7で上書き保存</b>してください。<br>▼実行結果の例<br>
+<img height="234" src="./プログラムを作成しよう1_files/while-03.png" width="327"></p>
+<p style="line-height: 150%">&nbsp;</p>
+<h3 style="line-height: 150%">【発展課題】問題8「数字のピラミッドを出力するプログラム」　ファイル名はrei8（<span class="style7">時間に余裕がある人のみ</span>）</h3>
+<p style="line-height: 150%">0から9の数字を並べて出力するときは、print関数のオプションend=""で次のように記述できます。<br>
+▼end=""で改行せずに出力ができます。<br>
+<img height="129" src="./プログラムを作成しよう1_files/while07-1.png" width="323"><br>▼実行結果<br>
+<img height="28" src="./プログラムを作成しよう1_files/while07-2.png" width="131"><br></p>
+<p style="line-height: 150%">▼つぎのような数字のピラミッドを出力してみましょう（ファイル名はrei8.py）<br>
+<img height="246" src="./プログラムを作成しよう1_files/while07-3.png" width="255"></p>
+<p style="line-height: 150%">▼ヒント（これ以外の書き方もあります。）<br>
+<img height="242" src="./プログラムを作成しよう1_files/while07-5.png" width="479"></p>
+<p style="line-height: 150%">&nbsp;</p>
+
+  
+
+</body></html>

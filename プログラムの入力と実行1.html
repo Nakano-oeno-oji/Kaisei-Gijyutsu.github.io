@@ -1,0 +1,119 @@
+
+<!-- saved from url=(0058)http://www.m-kaisei.ed.jp/2020html/python3/python9-for.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Language" content="ja">
+
+
+<title>プログラムの入力と実行</title>
+<link rel="stylesheet" type="text/css" href="./プログラムの入力と実行1_files/gray.css">
+<style type="text/css">
+.auto-style2 {
+	background-color: #FFFFCC;
+}
+.auto-style3 {
+	color: #FF0000;
+}
+.auto-style4 {
+	text-align: left;
+}
+.style7 {
+				color: #FF0000;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="line-height: 150%">制御文（3）for in による繰り返し処理</h2>
+<p style="line-height: 150%">for 
+はデータの集合体（数字や文字が集まったもの）から順に要素を変数に代入し、要素の数だけ繰り返し処理をおこないます。<br>
+例えば、データの集まりが文字列の場合は、文字を一文字ずつ変数に代入しながら繰り返します。<br>数字のデータの集まりとしては<span class="auto-style3">range関数</span>が便利です。</p>
+<p style="line-height: 150%">
+<table class="auto-style2" style="width: 500px">
+	<tbody><tr>
+		<td>&nbsp;for 変数　in &nbsp;データの集合<strong>：　#コロンを忘れないこと。</strong><br>　　実行する処理1<br>
+		　　実行する処理2<br>[else:<br>　　実行する処理1<br>　　実行する処理2]</td>
+	</tr>
+	<tr>
+		<td>#繰り返したい処理はインデント（字下げ）します。<br>
+		#else:はfor節の処理がすべて終わったときに実行します。for節でbreakが実行された時はelseは実行しません。</td>
+	</tr>
+</tbody></table>
+</p>
+<h3 style="line-height: 150%">例題9　ますはfor文の基本から　ファイル名はrei9.py</h3>
+<p style="line-height: 150%">for のあとに変数、つづけて　in　のあとにデータの集合体を記述します。<br>
+まずは、文字を用意してみましょう。#コメント文は省略して構いません。<br>
+<img height="160" src="./プログラムの入力と実行1_files/for-01.png" width="266"></p>
+<p style="line-height: 150%">▼実行結果　文字を順に取得し、変数に代入しています。5文字のときは5回処理を繰り返すことになります。<br>
+<img height="111" src="./プログラムの入力と実行1_files/for-02.png" width="360"></p>
+<p style="line-height: 150%">
+▼つづけてrei9ファイルに<span class="auto-style3">range関数</span>を使って繰り返し処理させてみます。<br>
+range関数を使うと簡単に回数指定ができます。たとえばrange（5）と入れると5回（0から4まで）のループ処理ができます。<br>
+<img height="252" src="./プログラムの入力と実行1_files/for-03.png" width="440"></p>
+<p style="line-height: 150%">
+<table class="auto-style2" style="width: 600">
+	<tbody><tr>
+		<td colspan="2"><strong>#range関数の使い方</strong><br>#range（ [初期値] , 終了値 , [増分] ）と書きます</td>
+	</tr>
+	<tr>
+		<td>&nbsp;range(100)<br>&nbsp;range(5,100)<br>&nbsp;range(10,100,2)<br>&nbsp;range(5,-99,-3)</td>
+		<td>[0,1,2,3…,99] 
+		0から100を超えない整数を返す<br>[5,6,7,8…,99] 5から100を超えない整数を返す<br>[10,12,14…,98] 
+		増分2で,10から98までの整数を返す<br>[5,2,-1…,-97] 増分-3で,5から-97までの整数を返す</td>
+	</tr>
+	<tr>
+		<td colspan="2">#[初期値]を省略すると0<br>#[増分]を省略すると1<br>#初期値から<span class="auto-style3"><strong>終了値を超えない整数リスト</strong></span>を返します</td>
+	</tr>
+</tbody></table>
+</p>
+<p style="line-height: 150%">
+▼実行結果　カウンタ変数が終了値を超えてないのが分かります。<br>
+<img height="314" src="./プログラムの入力と実行1_files/for-04.png" width="284"></p>
+<p style="line-height: 150%">
+▼増分を変えて奇数を出力してみましょう。<br>
+<img height="209" src="./プログラムの入力と実行1_files/for-05.png" width="399"></p>
+<p style="line-height: 150%">
+▼実行結果<br>
+<img height="161" src="./プログラムの入力と実行1_files/for-06.png" width="349"><br></p>
+<h3 style="line-height: 150%">例題10　for文とcontinue文,break文　との組み合わせ　ファイル名はrei10.py</h3>
+<p style="line-height: 150%">continueもbreakもif文といっしょに使います。<br>continue文に出会うと<span class="auto-style3">以降のループ内の実行内容を無視して、<strong>for文の先頭に戻ってきます</strong></span>。<br>
+break文は完全にループから抜け出すときに使います。<br>▼0から順に数字が出力されますが、変数が3の時にcontinue、7の時にbreakが実行されるプログラムです。<br>
+<img height="169" src="./プログラムの入力と実行1_files/for-07.png" width="417"><br>
+</p>
+<p style="line-height: 150%">
+▼実行結果<br>
+<img height="180" src="./プログラムの入力と実行1_files/for-09.png" width="352"><br>
+</p>
+<h3 style="line-height: 150%">問題11for文を使って奇数・偶数判定しよう　ファイル名はrei11.py</h3>
+<p style="line-height: 150%">1から9までの整数について、奇数なのか偶数なのか判定するプログラムを作成してください。<span class="auto-style3">5行以内</span>で書いてみよう。<br>
+▼実行結果<br>
+<img height="206" src="./プログラムの入力と実行1_files/for-10.png" width="284"><br>
+ヒント：剰余を返す演算子 % を使ってみましょう。a % b　と書いたときにaをbで割ったあまりを返してくれます。(例) 10 % 3 →　1</p>
+<h3 style="line-height: 150%">問題12ファイル名はrei12.py</h3>
+<p style="line-height: 150%">
+1以上2021以下の整数のうち、3でも4でも割り切れないものを考えます。そのうち、2の倍数と5の倍数はそれぞれ何個あるか数えるプログラムを作成しなさい。<br>
+▼実行結果<br>
+<img height="72" src="./プログラムの入力と実行1_files/for-11.png" width="279"></p>
+  
+<p style="line-height: 150%">&nbsp;</p>
+<h3 style="line-height: 150%">【発展課題】問題13for文でかけ算九九　ファイル名はrei13.py（<span class="style7">時間に余裕がある人</span>）</h3>
+<p style="line-height: 150%">for文を使ってかけ算九九を出力するプログラムを作成します。<span class="auto-style3">3行くらいで</span>書いてみましょう。<br>
+<table style="width: 100%">
+	<tbody><tr>
+		<td style="width: 110px">▼実行結果</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 110" valign="top">
+		<img height="553" src="./プログラムの入力と実行1_files/for-12.png" width="162"></td>
+		<td class="auto-style4" valign="top">　forループの中にforループを複数作ることができます（多重ループ）<br>
+		　　　<img height="212" src="./プログラムの入力と実行1_files/for-13.png" width="213"><br><br>
+		　かけ算九九の場合は、二重ループで記述します。<br>　←内側のループが終了値に到達すると（1の段の計算が終わると）、<br>
+		　　外側ループのカウンターが増加（2の段の計算を開始）しています。<br>　　　</td>
+	</tr>
+</tbody></table>
+</p>
+  
+
+
+</body></html>
